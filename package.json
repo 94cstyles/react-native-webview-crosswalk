@@ -1,16 +1,16 @@
 {
-    "name":             "react-native-webview-crosswalk",
-    "version":          "0.5.0",
-    "description":      "Crosswalk's WebView for React Native on Android",
-    "scripts":          {
+    "name": "react-native-webview-crosswalk",
+    "version": "0.5.0",
+    "description": "Crosswalk's WebView for React Native on Android",
+    "scripts": {
         "postinstall": "node get_library.js",
-        "lint":        "eslint ."
+        "lint": "eslint ."
     },
-    "repository":       {
+    "repository": {
         "type": "git",
-        "url":  "git+https://github.com/jordansexton/react-native-webview-crosswalk.git"
+        "url": "git+https://github.com/jordansexton/react-native-webview-crosswalk.git"
     },
-    "keywords":         [
+    "keywords": [
         "react",
         "native",
         "react native",
@@ -19,34 +19,37 @@
         "xwalk",
         "android"
     ],
-    "author":           "Jordan Sexton <jordan@jordansexton.com>",
-    "contributors":     [
+    "author": "Jordan Sexton <jordan@jordansexton.com>",
+    "contributors": [
         {
-            "name":  "Jordan Sexton",
+            "name": "Jordan Sexton",
             "email": "jordan@jordansexton.com"
-        }, {
-            "name":  "Faruq Rasid",
+        },
+        {
+            "name": "Faruq Rasid",
             "email": "github@ruqqq.sg"
-        }, {
+        },
+        {
             "name": "Daniel Vicory",
             "email": "dvicory@gmail.com"
         }
     ],
-    "license":          "MIT",
-    "bugs":             {
+    "license": "MIT",
+    "bugs": {
         "url": "https://github.com/jordansexton/react-native-webview-crosswalk/issues"
     },
-    "homepage":         "https://github.com/jordansexton/react-native-webview-crosswalk",
+    "homepage": "https://github.com/jordansexton/react-native-webview-crosswalk",
     "peerDependencies": {
-        "react":        ">=15.3.0",
-        "react-native": ">=0.32.0"
+        "react": ">=16.0.0",
+        "react-native": ">=0.46.0"
     },
-    "dependencies":     {
-        "node-wget": "0.4.2"
+    "dependencies": {
+        "node-wget": "0.4.2",
+        "react-addons-pure-render-mixin": "^15.6.0"
     },
-    "devDependencies":  {
-        "babel-eslint":        "6.1.2",
-        "eslint":              "3.2.2",
+    "devDependencies": {
+        "babel-eslint": "6.1.2",
+        "eslint": "3.2.2",
         "eslint-plugin-react": "6.0.0"
     }
 }

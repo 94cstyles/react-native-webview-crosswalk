@@ -1,4 +1,5 @@
 'use strict';
 
-export default class CrosswalkWebView {
-}
+import { WebView } from 'react-native'
+
+export default WebView
