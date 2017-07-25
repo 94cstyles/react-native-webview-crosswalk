@@ -1,6 +1,7 @@
 'use strict';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
 import ReactNative, { requireNativeComponent, View } from 'react-native';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
@@ -32,6 +33,7 @@ var CrosswalkWebView = React.createClass({
             PropTypes.number,           // used internally by React packager
         ]),
         url:                     PropTypes.string,
+        userAgent:               PropTypes.string,
         ...View.propTypes
     },
     getDefaultProps () {

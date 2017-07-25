@@ -104,6 +104,10 @@ class CrosswalkWebView extends XWalkView implements LifecycleEventListener {
         super.load(url, content);
     }
 
+    public void setUserAgent(@Nullable String ua) {
+        this.getSettings().setUserAgentString(ua);
+    }
+
     public void setInjectedJavaScript(@Nullable String js) {
         injectedJavaScript = js;
     }

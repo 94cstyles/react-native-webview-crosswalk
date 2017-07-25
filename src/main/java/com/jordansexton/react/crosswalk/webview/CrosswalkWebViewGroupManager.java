@@ -22,6 +22,7 @@ import com.facebook.react.views.webview.events.TopMessageEvent;
 
 import javax.annotation.Nullable;
 import java.util.Map;
+import android.util.Log;
 
 public class CrosswalkWebViewGroupManager extends ViewGroupManager<CrosswalkWebView> {
 
@@ -95,6 +96,10 @@ public class CrosswalkWebViewGroupManager extends ViewGroupManager<CrosswalkWebV
       setUrl(view, BLANK_URL);
     }
 
+    @ReactProp(name = "userAgent")
+    public void setUserAgent (XWalkView view, @Nullable String userAgent) {
+        ((CrosswalkWebView) view).setUserAgent(userAgent);
+    }
 
     @ReactProp(name = "injectedJavaScript")
     public void setInjectedJavaScript (XWalkView view, @Nullable String injectedJavaScript) {
