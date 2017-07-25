@@ -22,7 +22,6 @@ import com.facebook.react.views.webview.events.TopMessageEvent;
 
 import javax.annotation.Nullable;
 import java.util.Map;
-import android.util.Log;
 
 public class CrosswalkWebViewGroupManager extends ViewGroupManager<CrosswalkWebView> {
 
