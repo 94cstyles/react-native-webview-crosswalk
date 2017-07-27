@@ -20,10 +20,11 @@ import org.xwalk.core.XWalkView;
 import com.facebook.react.views.webview.events.TopMessageEvent;
 
 import javax.annotation.Nullable;
+import android.util.Log;
 
 class CrosswalkWebView extends XWalkView implements LifecycleEventListener {
 
-    private final Activity activity;
+    private final ReactContext reactContext;
 
     private final EventDispatcher eventDispatcher;
 
@@ -51,11 +52,11 @@ class CrosswalkWebView extends XWalkView implements LifecycleEventListener {
         }
     }
 
-    public CrosswalkWebView (ReactContext reactContext, Activity _activity) {
-        super(reactContext, _activity);
+    public CrosswalkWebView (ReactContext _reactContext, Activity _activity) {
+        super(_reactContext, _activity);
 
-        activity = _activity;
-        eventDispatcher = reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher();
+        reactContext = _reactContext;
+        eventDispatcher = _reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher();
         resourceClient = new ResourceClient(this);
         uiClient = new UIClient(this);
 
@@ -253,7 +254,7 @@ class CrosswalkWebView extends XWalkView implements LifecycleEventListener {
 
         private void overrideUri (Uri uri) {
             Intent action = new Intent(Intent.ACTION_VIEW, uri);
-            activity.startActivity(action);
+            reactContext.getCurrentActivity().startActivity(action);
         }
     }
 

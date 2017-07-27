@@ -61,7 +61,7 @@ public class CrosswalkWebViewGroupManager extends ViewGroupManager<CrosswalkWebV
     @Override
     public void onDropViewInstance(CrosswalkWebView view) {
         super.onDropViewInstance(view);
-        ((ThemedReactContext) view.getContext()).removeLifecycleEventListener((CrosswalkWebView) view);
+        reactContext.removeLifecycleEventListener((CrosswalkWebView) view);
         view.onDestroy();
     }
 
